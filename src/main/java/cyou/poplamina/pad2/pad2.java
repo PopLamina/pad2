@@ -1,5 +1,6 @@
 package cyou.poplamina.pad2;
 
+import cyou.poplamina.pad2.core.init.BlockInit;
 import cyou.poplamina.pad2.core.init.ItemInit;
 import cyou.poplamina.pad2.data.DataGenerator;
 import org.slf4j.Logger;
@@ -74,6 +75,7 @@ public class pad2
     public pad2(IEventBus modEventBus, ModContainer modContainer)
     {
         ItemInit.ITEMS.register(modEventBus);
+        BlockInit.BLOCKS.register(modEventBus);
 
         modEventBus.addListener(DataGenerator::gatherData);
 
